@@ -25,6 +25,7 @@ public class LSEDTest {
         l3.insertFirst(al2);
         Aluno al3 = new Aluno("753453", "andre ferreira ver.");
         l3.insertFirst(al3);
+        System.out.println("Deputados e senadores:");
         l3.showAll();
 
 
