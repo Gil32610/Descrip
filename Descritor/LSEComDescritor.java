@@ -32,6 +32,21 @@ public class LSEComDescritor<T> {
             }
         }
     }
+    public void removeFirst(){
+        LSENode<T> aux;
+        if(this.isEmptyNodes()){
+            System.out.println("Lista Vazia!");
+        }
+        else if(this.nodes == 1){
+            this.primeiro = null;
+            this.ultimo = this.primeiro;
+            this.nodes = 0;
+        }
+        else{
+            this.primeiro = this.primeiro.getNext();
+            this.nodes--;
+        }
+    }
 
     // com descritor existem mais maneiras de verificar se está vazio
     public boolean isEmpty() {
