@@ -19,6 +19,16 @@ public class LSEDTest {
         System.out.println("Valores da lista 2^");
         l2.showAll();
 
-        
+        Aluno al1 = new Aluno("734237", "jorge senador");
+        l3.insertFirst(al1);
+        Aluno al2 = new Aluno("724213", "cleiton dept. fed.");
+        l3.insertFirst(al2);
+        Aluno al3 = new Aluno("753453", "andre ferreira ver.");
+        l3.insertFirst(al3);
+        l3.showAll();
+
+
+
+
     }
 }
