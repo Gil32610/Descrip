@@ -27,6 +27,7 @@ public class LSEComDescritor<T> {
             aux = this.primeiro;
             while (aux != null) {
                 System.out.println(aux.getContent());
+                // todas as classes embutidas já possuem o toString, compareTo etc.
                 aux = aux.getNext();
             }
         }
