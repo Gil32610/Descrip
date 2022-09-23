@@ -65,6 +65,7 @@ public class LSEComDescritor<T extends Comparable<T>> {
 
     //Inserir ordenado em ordem crescente e sem repetidos
     public void insertionSort(T content){
+        LSENode anterior, atual;
         LSENode n = new LSENode(content);
         if(this.isEmptyNodes()){
             this.primeiro = n;
@@ -80,6 +81,23 @@ public class LSEComDescritor<T extends Comparable<T>> {
             this.ultimo.setNext(n);
             this.ultimo = n;
             this.nodes++;
+        }
+        else{ //insercao no meio da lista
+        atual = this.primeiro;
+        anterior = null;
+        while(atual != null){
+            if(atual.getContent().compareTo(content)>0){
+                anterior.setNext(n);
+                n.setNext(atual);
+                this.nodes++;
+                return;
+            }
+            else{
+                anterior = atual;
+                atual = atual.getNext();
+            }
+        }
+        
         }
     }
 }
