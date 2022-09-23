@@ -76,5 +76,10 @@ public class LSEComDescritor<T extends Comparable<T>> {
             this.primeiro = n;
             this.nodes++;
         }
+        else if(content.compareTo(this.primeiro.getContent())>0){
+            this.primeiro.setNext(n);
+            this.ultimo = n;
+            this.nodes++;
+        }
     }
 }
