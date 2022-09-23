@@ -1,5 +1,6 @@
 package Descritor;
-public class LSENode <T> {
+public class LSENode <T extends Comparable<T>> {
+    // o objeto é comparable e não lsenode 
     private T content;
     //T é um tipo de dados (classe) genérica
     private LSENode<T> next;

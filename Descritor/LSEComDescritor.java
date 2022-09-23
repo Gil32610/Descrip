@@ -1,6 +1,6 @@
 package Descritor;
 
-public class LSEComDescritor<T> {
+public class LSEComDescritor<T extends Comparable<T>> {
     private LSENode<T> primeiro;
     private LSENode<T> ultimo;
     private int nodes;
@@ -61,5 +61,18 @@ public class LSEComDescritor<T> {
             return true;
         }
         return false;
+    }
+
+    //Inserir ordenado em ordem crescente e sem repetidos
+    public void insertionSort(T content){
+        LSENode n = new LSENode(content);
+        if(this.isEmptyNodes()){
+            this.primeiro = n;
+            this.ultimo = n;
+            this.nodes++;
+        }
+        else if(content.compareTo(this.primeiro.getContent())<0){
+            
+        }
     }
 }
